@@ -212,10 +212,7 @@ body {
   inset: 0;
   border-radius: 14px;
   border-left: 3px solid transparent;
-  background:
-    linear-gradient(180deg,
-      rgba(10, 125, 59, 0.9),
-      rgba(201, 24, 24, 0.9));
+  background: rgba(201, 24, 24, 0.763);
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -244,7 +241,7 @@ body {
   width: 100px;
   height: 2px;
   margin-top: 5px;
-  background: linear-gradient(90deg, var(--vert), var(--rouge));
+  background: #357A1E;
   border-radius: 999px;
 }
 
