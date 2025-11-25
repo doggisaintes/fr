@@ -1,0 +1,476 @@
+/* =========================
+   Reset & base
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --vert: #0a7d3b;
+  --rouge: #c91818;
+  --blanc: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  background: #FFEFCF;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* =========================
+   Bandeau moderne (compact)
+   ========================= */
+.bandeau {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  /* gauche / centre / droite */
+  align-items: center;
+  padding: 8px 20px;
+  background: rgba(255, 239, 207, 0.7);
+  backdrop-filter: blur(6px);
+  color: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, var(--vert), var(--blanc), var(--rouge)) 1;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Gauche */
+.gauche {
+  text-align: left;
+  gap: 2px;
+}
+
+.desc {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #357A1E;
+}
+
+.adresse,
+.tel {
+  font-size: 0.85rem;
+  color: #E53838;
+}
+
+/* Centre */
+.centre {
+  text-align: center;
+}
+
+.nom {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.2rem;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  margin: 10px 0 12px;
+  /* légèrement descendu */
+  line-height: 1;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  /* centre parfait */
+  align-items: center;
+}
+
+.nav a {
+  color: #357A1E;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vert), var(--blanc), var(--rouge));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Droite (horaires mieux agencés) */
+.droite {
+  text-align: right;
+  align-items: flex-end;
+  margin-top: -29px;
+  margin-bottom: 0px;
+}
+
+.droite h2 {
+  margin-bottom: 28px;
+  font-size: 0.78rem;
+  /* réduit */
+  font-weight: 600;
+  letter-spacing: .4px;
+  color: #fff;
+}
+
+.horaires {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.grille-horaires {
+  display: flex;
+  gap: 16px;
+}
+
+.grille-horaires ul {
+  list-style: none;
+  font-size: .76rem;
+  line-height: 1.35;
+  color: #E53838;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   Menu moderne
+   ========================= */
+.menu {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 18px;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 1.8rem;
+  margin-bottom: 28px;
+  color: #357A1E;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, .6);
+}
+
+.note-menu {
+  color: #E53838;
+  margin-bottom: 20px;
+  /* réduit l’espace sous le texte */
+  margin-top: -35px;
+  /* rapproche du titre */
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.menu-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Carte catégorie : fond sombre uniforme, pas de blanc */
+.categorie {
+  position: relative;
+  padding: 14px 18px 10px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid #050505;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+/* Liseré subtil sur le bord gauche (rouge + vert) */
+.categorie::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  border-left: 3px solid transparent;
+  background:
+    linear-gradient(180deg,
+      rgba(10, 125, 59, 0.9),
+      rgba(201, 24, 24, 0.9));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding-left: 2px;
+  opacity: 0.9;
+}
+
+/* Titre de catégorie */
+.categorie h3 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 6px;
+  font-size: 1, 5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #E53838;
+  font-family: "Vedana", sans-serif;
+}
+
+/* Trait simple sous le titre, classique */
+.categorie h3::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin-top: 5px;
+  background: linear-gradient(90deg, var(--vert), var(--rouge));
+  border-radius: 999px;
+}
+
+/* Liste des plats */
+.categorie ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+/* Lignes de plats : même fond partout, pas d’alternance */
+.categorie li {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 9px 0;
+  font-size: 0.95rem;
+  color: #357A1E;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.categorie li:last-child {
+  border-bottom: none;
+}
+
+.categorie li:hover {
+  padding-inline: 8px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,
+      rgba(10, 125, 59, 0.55),
+      /* Vert */
+      rgba(255, 255, 255, 0.25),
+      /* Blanc discret */
+      rgba(201, 24, 24, 0.55)
+      /* Rouge */
+    );
+  color: #ffffff;
+  transition: 0.25s ease;
+  transform: translateX(4px);
+
+  .plat small {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #ffffff;
+  }
+
+  .prix {
+    flex-shrink: 0;
+    align-self: center;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background: rgba(207, 207, 207, 0.15);
+  }
+}
+
+/* Texte du plat + description */
+.plat {
+  flex: 1;
+  text-align: left;
+  font-weight: 500;
+}
+
+.plat small {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(230, 230, 230, 0.75);
+}
+
+/* Prix à droite, look simple & lisible */
+.prix {
+  flex-shrink: 0;
+  align-self: center;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--rouge);
+  color: var(--rouge);
+  background: rgba(207, 207, 207, 0.15);
+}
+
+/* =========================
+   Responsive menu
+   ========================= */
+@media (max-width: 800px) {
+  .menu {
+    margin-top: 20px;
+  }
+
+  .categorie {
+    padding: 12px 14px 8px;
+    border-radius: 12px;
+  }
+
+  .categorie::before {
+    border-radius: 12px;
+  }
+
+  .categorie li {
+    font-size: 0.9rem;
+  }
+
+  .prix {
+    font-size: 0.85rem;
+    padding: 3px 8px;
+  }
+}
+
+/* =========================
+   Footer / Réseaux sociaux
+   ========================= */
+.footer {
+  max-width: 900px;
+  margin: 0 auto 32px;
+  padding: 0 18px;
+  text-align: center;
+  color: #E53838;
+}
+
+.footer p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.4rem;
+}
+
+.footer-socials a {
+  color: #E53838;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-2px) scale(1.05);
+  color: var(--vert);
+}
+
+/* =========================
+   Bouton retour en haut
+   ========================= */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #e81c1c;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#topBtn.show {
+  opacity: 0.7;
+  visibility: visible;
+}
+
+#topBtn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.logo-doggi {
+  height: 60px;
+  margin-top: -5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 900px) {
+  .bandeau {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .gauche,
+  .droite {
+    text-align: center;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  .grille-horaires {
+    justify-content: center;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  #topBtn {
+    display: none !important;
+  }
+}

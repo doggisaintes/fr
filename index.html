@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>D'oggi - Restaurant Italien</title>
+  <!-- Police pour le nom -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Bandeau -->
+  <header class="bandeau">
+    <!-- Gauche -->
+    <div class="col gauche">
+      <p class="desc">Repas & goûter à emporter</p>
+      <p class="adresse">1 Cours des Apôtres de la Liberté, 17100 Saintes</p>
+      <p class="tel">Tel : 06 99 35 52 21</p>
+    </div>
+
+    <!-- Centre -->
+    <div class="col centre">
+      <img src="D'oggi_official_red.png" alt="D'oggi" class="logo-doggi" />
+      <nav class="nav">
+        <ul>
+          <li><a href="#pizzas">Pizzas</a></li>
+          <li><a href="#pates">Pâtes</a></li>
+          <li><a href="#foccacia">Foccacia</a></li>
+          <li><a href="#desserts">Desserts</a></li>
+          <li><a href="#boissons">Boissons</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Droite -->
+    <div class="col droite">
+      <div class="horaires">
+        <div class="grille-horaires">
+          <ul>
+            <li>Du lundi au samedi</li>11h – 20h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu -->
+  <main>
+    <section class="menu">
+      <h2>Notre Menu</h2>
+      <p class="note-menu">
+        Pâte à pizza, sauce tomate, foccacia et desserts faits maison.
+      </p>
+
+      <div class="menu-stack">
+        <!-- PIZZAS -->
+        <div class="categorie" id="pizzas">
+          <h3>Pizzas</h3>
+          <ul>
+            <li>
+              <span class="plat">
+                Margerita<br>
+                <small>Sauce tomate, mozzarella, olives</small>
+              </span>
+              <span class="prix">10€</span>
+            </li>
+            <li>
+              <span class="plat">
+                Regina<br>
+                <small>Sauce tomate, mozzarella, jambon, champignons</small>
+              </span>
+              <span class="prix">11€</span>
+            </li>
+            <li>
+              <span class="plat">
+                Calzone (chausson)<br>
+                <small>Sauce tomate, mozzarella, jambon, œuf</small>
+              </span>
+              <span class="prix">11€</span>
+            </li>
+            <li>
+              <span class="plat">
+                4 Fromages<br>
+                <small>Sauce tomate, mozzarella, chèvre, camembert, roquefort (ou bleu)</small>
+              </span>
+              <span class="prix">11€</span>
+            </li>
+            <li>
+              <span class="plat">
+                Napolitaine<br>
+                <small>Sauce tomate, mozzarella, câpres, olives, anchois</small>
+              </span>
+              <span class="prix">11€</span>
+            </li>
+            <li>
+              <span class="plat">
+                Neptune<br>
+                <small>Sauce tomate, mozzarella, thon, poivrons, olives, oignons</small>
+              </span>
+              <span class="prix">11€</span>
+            </li>
+            <li>
+              <span class="plat">
+                Vulcano<br>
+                <small>Sauce tomate, mozzarella, chorizos, œuf</small>
+              </span>
+              <span class="prix">11€</span>
+            </li>
+            <li>
+              <span class="plat">
+                Végétarienne<br>
+                <small>Sauce tomate, mozzarella, champignons, légumes variés</small>
+              </span>
+              <span class="prix">11€</span>
+            </li>
+            <li>
+              <span class="plat">
+                Chèvre miel<br>
+                <small>Crème fraîche, mozzarella, chèvre, miel</small>
+              </span>
+              <span class="prix">11€</span>
+            </li>
+            <li>
+              <span class="plat">
+                1 part de pizza (1/4)
+              </span>
+              <span class="prix">3€</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PÂTES (LASAGNES) -->
+        <div class="categorie" id="pates">
+          <h3>Pâtes</h3>
+          <ul>
+            <li>
+              <span class="plat">
+                Lasagnes<br>
+                <small>Feuilles de lasagnes, sauce bolognaise, béchamel, parmesan</small>
+              </span>
+              <span class="prix">8€</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- FOCCACIA -->
+        <div class="categorie" id="foccacia">
+          <h3>Foccacia</h3>
+          <ul>
+            <li>
+              <span class="plat">
+                Classique<br>
+                <small>Poivrons, tomates cerises, olives, romarin</small>
+              </span>
+              <span class="prix">3€</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- DESSERTS -->
+        <div class="categorie" id="desserts">
+          <h3>Desserts</h3>
+          <ul>
+            <li>
+              <span class="plat">
+                Panna cotta<br>
+                <small>Coulis au choix&nbsp;: caramel beurre salé ou fruits rouges</small>
+              </span>
+              <span class="prix">3€</span>
+            </li>
+            <li>
+              <span class="plat">
+                Tiramisu café<br>
+                <small>Biscuits au choix&nbsp;: spéculoos ou boudoirs</small>
+              </span>
+              <span class="prix">3€</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- BOISSONS -->
+        <div class="categorie" id="boissons">
+          <h3>Boissons</h3>
+          <ul>
+            <li><span class="plat">Coca Cola (33cl)</span><span class="prix">2€</span></li>
+            <li><span class="plat">Coca Cola zéro (33cl)</span><span class="prix">2€</span></li>
+            <li><span class="plat">Fanta (33cl)</span><span class="prix">2€</span></li>
+            <li><span class="plat">Ice Tea (33cl)</span><span class="prix">2€</span></li>
+            <li><span class="plat">Eau Cristalline (50cl)</span><span class="prix">1€</span></li>
+            <li><span class="plat">San Pellegrino (50cl)</span><span class="prix">2€</span></li>
+            <li><span class="plat">Jus d’orange (33cl)</span><span class="prix">2€</span></li>
+            <li><span class="plat">Sprite (33cl)</span><span class="prix">2€</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Réseaux sociaux -->
+  <footer class="footer">
+    <p>Retrouvez-nous sur les réseaux sociaux&nbsp;: <strong>@doggisaintes</strong></p>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/doggisaintes?igsh=MXY2bHpqOHlhZmZ5cA%3D%3D&utm_source=qr" target="_blank"
+        aria-label="Instagram D'oggi"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" aria-label="Facebook D'oggi"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bouton retour en haut -->
+  <button id="topBtn" title="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 250) {
+        topBtn.classList.add("show");
+      } else {
+        topBtn.classList.remove("show");
+      }
+    });
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+
+</html>
