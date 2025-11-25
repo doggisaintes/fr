@@ -199,7 +199,7 @@ body {
   position: relative;
   padding: 14px 18px 10px;
   border-radius: 14px;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(255, 239, 207, 0.071);
   border: 1px solid #050505;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
   overflow: hidden;
@@ -322,7 +322,7 @@ body {
   margin-top: 2px;
   font-size: 0.8rem;
   font-weight: 400;
-  color: rgba(230, 230, 230, 0.75);
+  color: rgba(0, 0, 0, 0.75);
 }
 
 /* Prix à droite, look simple & lisible */
