@@ -203,6 +203,7 @@ body {
   border: 1px solid #050505;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
   overflow: hidden;
+  scroll-margin-top: 120px;
 }
 
 /* Liseré subtil sur le bord gauche (rouge + vert) */
@@ -449,6 +450,9 @@ body {
     grid-template-columns: 1fr;
     gap: 8px;
     text-align: center;
+    position: static !important;
+    /* le bandeau ne suit plus le scroll */
+    top: auto;
   }
 
   .gauche,
